@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.serial' module='max, data'>
+  <digest>
+    Extends serial object for Arduino specific control.
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.serial</o> extends the serial object for working with input data from Arduinos. The object spits out an 'r' character at regular intervals that queries the Arduino for analog sensor data. The object spits out all analog data as a list out the first outlet with additional outlets reserved for data smoothing.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="float">
+      <digest>
+        Input data
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist>
+    <outlet id="0" type="float">
+      <digest>
+        Output data
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </outlet>
+  </outletlist>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="port" get="1" set="1" size="1" type="int">
+      <digest>
+        Int selects Port from a umenu. 0 index.
+      </digest>
+      <description>
+        Int selects Port from a umenu. 0 index.
+      </description>
+    </attribute>
+    <attribute name="baudrate" get="1" set="1" size="1" type="int">
+      <digest>
+        Int selects baudrate from umenu, def. 3, which is menu item 9600.
+      </digest>
+      <description>
+        Int selects baudrate from umenu, def. 3, which is baudrate 9600. Baudrates include 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 128000, and 256000.
+      </description>
+    </attribute>
+    <attribute name="samplerate" get="1" set="1" size="1" type="int">
+      <digest>
+        How fast data is queried on the serial port (in milliseconds). def. 10 ms.
+      </digest>
+      <description>
+        How fast data is queried on the serial port (in milliseconds). def. 10 ms.
+      </description>
+    </attribute>
+    <attribute name="smoothing" get="1" set="1" size="1" type="int">
+      <digest>
+        How much smoothing (n) is applied to first three data points. (input*n/n). The data is output in 2nd, 3rd, and 4th outlets. 
+      </digest>
+      <description>
+        How much smoothing (n) is applied to first three data points. (input*n/n). The data is output in 2nd, 3rd, and 4th outlets. 
+      </description>
+    </attribute>
+    <attribute name="start" get="1" set="1" size="1" type="int">
+      <digest>
+        0/1 toggle to start/stop querying data on the serial port.
+      </digest>
+      <description>
+        0/1 toggle to start/stop querying data on the serial port. 
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <method name='port'>
+      <digest>
+        port $1 changes the serial port (umenu index).
+      </digest>
+      <description>
+        port $1 changes the serial port (umenu index).
+      </description>
+    </method>
+    <method name='baudrate'>
+      <digest>
+        Int selects baudrate from umenu, def. 3, which is menu item 9600.
+      </digest>
+      <description>
+        Int selects baudrate from umenu, def. 3, which is menu item 9600.
+      </description>
+    </method>
+    <method name='samplerate'>
+      <digest>
+        How fast data is queried on the serial port (in milliseconds). def. 10 ms.
+      </digest>
+      <description>
+        How fast data is queried on the serial port (in milliseconds). def. 10 ms.
+      </description>
+    </method>
+    <method name='smoothing'>
+      <digest>
+        How much smoothing (n) is applied to first three data points. (input*n/n). The data is output in 2nd, 3rd, and 4th outlets. 
+      </digest>
+      <description>
+        How much smoothing (n) is applied to first three data points. (input*n/n). The data is output in 2nd, 3rd, and 4th outlets. 
+      </description>
+    </method>
+    <method name='start'>
+      <digest>
+        0/1 toggle to start/stop querying data on the serial port.
+      </digest>
+      <description>
+        0/1 toggle to start/stop querying data on the serial port. 
+      </description>
+    </method>
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='serial'/>
+    <seealso name='data.midiinfo'/>
+    <seealso name='data.ttout'/>
+    <seealso name='data.ttin'/>
+    <seealso name='data.oscout'/>
+    <seealso name='data.oscout.master'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.zoom' module='max, data'>
+  <digest>
+    Magnify a data stream for live performance.
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.zoom</o> magnifies a data stream around a center point. Whenever zoom in enabled, we sample and hold the current data location, and use the data stream to move around this center point at a smaller scale.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="float">
+      <digest>
+        Input data
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist>
+    <outlet id="0" type="float">
+      <digest>
+        Output data
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </outlet>
+  </outletlist>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="zoom" get="1" set="1" size="1" type="int">
+      <digest>
+        0/1 turns zoom on and off.
+      </digest>
+      <description>
+        0/1 toggle turns zoom on and off.
+      </description>
+    </attribute>
+    <attribute name="factor" get="1" set="1" size="1" type="int">
+      <digest>
+        Zoom factor to scale data by when zoom is enabled. Def. x10
+      </digest>
+      <description>
+        Zoom factor to scale data by when zoom is enabled. Def. x10. This is exponential zooming, so incrementing zoom will increase the scale by zoom factor (e.g. factor^n).
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <!-- <method name='control'>
+      <digest>
+        control $1 changes the controller to listen for.
+      </digest>
+      <description>
+        control $1 changes the controller to listen for.
+      </description>
+    </method> -->
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='data.scale'/>
+    <seealso name='scale'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

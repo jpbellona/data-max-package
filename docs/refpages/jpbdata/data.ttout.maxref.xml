@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.ttout' module='max, data'>
+  <digest>
+    A special forward object abstraction. All <o>data.ttout</o> objects will populate a umenu (in a bpatcher) for data mapping.
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.ttout</o> forwards data. The object collects and sends named data.ttout objects to a umenu in all <o>data.ttin</o> objects. The collection of named sends enables easy access to data inputs, the appropriate data you want. The addition of a data.ttout object dynamically adds its input to the data.ttin list. Great for collecting sends while building an input system. One may also use specially-named forward objects and create a static menu for data.ttin.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="float">
+      <digest>
+        Named data send
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+   <!--  <attribute name="control" get="1" set="1" size="1" type="int">
+      <digest>
+        The control to listen for.
+      </digest>
+      <description>
+        There are 151 controllers (1-151) one may listen for on the Korg nanoKontrol.
+      </description>
+    </attribute> -->
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <!-- <method name='control'>
+      <digest>
+        control $1 changes the controller to listen for.
+      </digest>
+      <description>
+        control $1 changes the controller to listen for.
+      </description>
+    </method> -->
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <objarg name="name" optional="1" type="String">
+      <digest>
+        The name of the data.ttout object. This will name the forward object and populate the menu inside all data.ttin objects.
+      </digest>
+      <description>
+        The name of the data.ttout object. This will name the forward object and populate the menu inside all data.ttin objects.
+      </description>
+    </objarg>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='data.ttin'/>
+    <seealso name='forward'/>
+    <seealso name='receive'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

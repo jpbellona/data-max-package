@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.midiinfo' module='max, data'>
+  <digest>
+    Extends midiinfo
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.midiinfo</o> extends midiinfo. data.midiinfo offers a bpatcher with automatic input/output menu selections and named forward to send all its menu selections to. Match any receive object to your MIDI objects and data.midiinfo enables full control of your project's MIDI
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="string">
+      <digest>
+        Extends midiinfo
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="send" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the forward object in data.midiinfo
+      </digest>
+      <description>
+        @send _name_ names a forward object inside data.midiinfo that all MIDI menu selections are sent to.
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <!-- <method name='control'>
+      <digest>
+        control $1 changes the controller to listen for.
+      </digest>
+      <description>
+        control $1 changes the controller to listen for.
+      </description>
+    </method> -->
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <objarg name="input" optional="1" type="string">
+      <digest>
+        Fills a menu with MIDI input device names
+      </digest>
+      <description>
+        'input' or 'output' changes the type of midi port menu.
+      </description>
+    </objarg>
+    <objarg name="output" optional="1" type="string">
+      <digest>
+        Fills a menu with MIDI output device names
+      </digest>
+      <description>
+        'input' or 'output' changes the type of midi port menu.
+      </description>
+    </objarg>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='midiinfo'/>
+    <seealso name='notein'/>
+    <seealso name='noteout'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

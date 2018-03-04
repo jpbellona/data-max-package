@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.ttin' module='max, data'>
+  <digest>
+    Named receive with a umenu of all data.ttout objects.
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.ttin</o> is a data listener. The object listens for data from all <o>data.ttout</o> objects and depending on the user's menu selection, outputs the appropriate data. The list of data.ttout objects is automatically sorted alphanumerically. One may also rename data.ttin and generate a static menu to use within any codified framework (e.g. korgnano Max package). (see examples in this Max package)
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="float">
+      <digest>
+        Named receive with umenu of forward names
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <!-- <attribute name="control" get="1" set="1" size="1" type="int">
+      <digest>
+        The control to listen for.
+      </digest>
+      <description>
+        (0) sets the thin type to poll. (1) sets the thin type to EQ. (2) sets the thin type to event.
+      </description>
+    </attribute> -->
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <method name='out'>
+      <digest>
+        out $1 selects a data.ttout object by menu index. The menu is sorted alphanumerically.
+      </digest>
+      <description>
+        out $1 selects a data.ttout object by menu index. The menu is sorted alphanumerically.
+      </description>
+    </method>
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='data.ttout'/>
+    <seealso name='umenu'/>
+    <seealso name='receive'/>
+    <seealso name='forward'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

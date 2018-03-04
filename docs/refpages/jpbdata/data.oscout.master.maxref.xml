@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.oscout.master' module='max, data'>
+  <digest>
+    Controls all data.oscout objects
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.oscout.master</o> controls all data.oscout objects. Similarly, the object could also be used to set ip and port for all udpsends in your project. data.oscout.master sends @ip @port arguments out its outlet and a @send attribute sends ip and port information automatically out through a named forward object.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="string">
+      <digest>
+        Any data (i f s l)
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="ip" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the OSC ip address. Defaults to host computer, 127.0.0.1
+      </digest>
+      <description>
+        The name of the OSC ip address.
+      </description>
+    </attribute>
+    <attribute name="port" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the OSC port.
+      </digest>
+      <description>
+        The name of the OSC port.
+      </description>
+    </attribute>
+    <attribute name="send" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the forward object to send ip and port information to. Default is 'oscmaster'.
+      </digest>
+      <description>
+        The name of the send object to send ip and port information to. Default is 'oscmaster', which automatically works with data.oscout object out of the box.
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <!-- <method name='control'>
+      <digest>
+        control $1 changes the controller to listen for.
+      </digest>
+      <description>
+        control $1 changes the controller to listen for.
+      </description>
+    </method> -->
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='data.oscout'/>
+    <seealso name='udpsend'/>
+    <seealso name='udpreceive'/>
+    <seealso name='data.midiinfo'/>
+    <seealso name='data.serial'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

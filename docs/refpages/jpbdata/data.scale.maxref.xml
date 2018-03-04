@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpb_ref.xsl" type="text/xsl"?>
+<c74object category='operator, modifier' name='data.scale' module='max, data'>
+  <digest>
+    Extends the scale object to scale data dynamically and non-linearly.
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.scale</o> extends the scale object by providing various methods for scaling incoming data for live performance. The object may scale data dynamically (input automatically sets the min and max range), and includes various non-linear functions. GUI was built using <o>pattr</o>, so this module can easily be incorporated into user presets / <o>pattrstorage</o>.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      operator
+    </metadata>
+    <metadata name='tag'>
+      modifier
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="float">
+      <digest>
+        Incoming Number Stream
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="low_input" get="1" set="1" size="1" type="decimal">
+      <digest>
+        Low input range
+      </digest>
+      <description>
+        Set the low input range
+      </description>
+    </attribute>
+    <attribute name="high_input" get="1" set="1" size="1" type="decimal">
+      <digest>
+        High input range
+      </digest>
+      <description>
+        Set the high input range
+      </description>
+    </attribute>
+    <attribute name="low_output" get="1" set="1" size="1" type="decimal">
+      <digest>
+        Low output range
+      </digest>
+      <description>
+        Set the low output range
+      </description>
+    </attribute>
+    <attribute name="high_output" get="1" set="1" size="1" type="decimal">
+      <digest>
+        High output range
+      </digest>
+      <description>
+        Set the high output range
+      </description>
+    </attribute>
+    <attribute name="dynamic" get="1" set="1" size="1" type="int">
+      <digest>
+        Dynamic input scaling
+      </digest>
+      <description>
+        Toggle the dynamic input (uses trough and peak)
+      </description>
+    </attribute>
+    <attribute name="preset" get="1" set="1" size="1" type="int">
+      <digest>
+        Select a common mapping range.
+      </digest>
+      <description>
+        (0-3) selects a common mapping range (MIDI in, MIDI out, amp in, amp out). Suggest other ranges, and I will add them here.
+      </description>
+    </attribute>
+    <attribute name="clipMode" get="1" set="1" size="1" type="int">
+      <digest>
+        Types of clipping on input/output of data.
+      </digest>
+      <description>
+        Select types of clipping on i/o of data. Does not work with dynamic input on. 
+        None is default. Low clips input to set range. High clips output to set range. Both clips data to both low and high ranges.
+      </description>
+    </attribute>
+    <attribute name="invert" get="1" set="1" size="1" type="int">
+      <digest>
+        Toggle inverse scaling on/off. Inverts output range.
+      </digest>
+      <description>
+        Toggle inverse scaling on/off. Inverts output range.
+      </description>
+    </attribute>
+    <attribute name="nonlinear" get="1" set="1" size="1" type="int">
+      <digest>
+        Toggle Non-linear scaling
+      </digest>
+      <description>
+        Toggle non-linear scaling (uses bpatcher scripting name: functionMap)
+      </description>
+    </attribute>
+    <attribute name="functionType" get="1" set="1" size="1" type="int">
+      <digest>
+        Select type of non-linear scaling.
+      </digest>
+      <description>
+        Select between eight types of non-linear scaling methods.
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <method name='number'>
+      <digest>
+        Integers received in the first inlet are converted to decimals.
+      </digest>
+      <description>
+        Integers received in the first inlet are converted to decimals.
+      </description>
+    </method>
+    <method name='decimal'>
+      <digest>
+        A number sent to the first inlet triggers the smoothing function.
+      </digest>
+      <description>
+        A number sent to the first inlet triggers the smoothing function.
+      </description>
+    </method>
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist/>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='scale'/>
+    <seealso name='zmap'/>
+    <seealso name='data.scale.expr'/>
+    <seealso name='data.hysteresis'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        
+      </description>
+    </entry>
+  </misc>
+</c74object>

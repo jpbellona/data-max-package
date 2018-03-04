@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.toggle' module='max, data'>
+  <digest>
+    Do a lot of things with a toggle.
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.toggle</o> collects a lot of information about toggle button behavior. The object outputs different functions based upon an incoming toggle (0/1). Toggle count, time between toggles, toggle down, toggle up, MIDI cc message, MIDI nn message. Great for syncing with buttons from the 'hi' object.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="float">
+      <digest>
+        Named data send
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="count" get="1" set="1" size="1" type="int">
+      <digest>
+        The maximum number of button toggles to count through before resetting.
+      </digest>
+      <description>
+        The maximum number of button toggles to count through before resetting.
+      </description>
+    </attribute>
+    <attribute name="metro" get="1" set="1" size="1" type="int">
+      <digest>
+        The pulse of metro bangs that are output when the button toggle is held down.
+      </digest>
+      <description>
+        The pulse of metro bangs that are output when the button toggle is held down.
+      </description>
+    </attribute>
+    <attribute name="nn" get="1" set="1" size="1" type="int">
+      <digest>
+        The MIDI note number to trigger when the button is pressed down.
+      </digest>
+      <description>
+        The MIDI note number to trigger when the button is pressed down.
+      </description>
+    </attribute>
+    <attribute name="cc" get="1" set="1" size="1" type="int">
+      <digest>
+        The MIDI control change message to trigger when the button is pressed down.
+      </digest>
+      <description>
+        The MIDI control change message to trigger when the button is pressed down.
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <method name='reset'>
+      <digest>
+        Reset the toggle button counter.
+      </digest>
+      <description>
+        Reset the toggle button counter.
+      </description>
+    </method>
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='data.midiinfo'/>
+    <seealso name='hi'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

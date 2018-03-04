@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<c74object category='controller, data' name='data.oscout' module='max, data'>
+  <digest>
+    Extends udpsend object
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    <o>data.oscout</o> extends the udpsend object. data.oscout adds @url @ip @port arguments and accepts any data (int float string list) into its input. All data.oscout objects may be controlled by the data.oscout.master object so you have one place to set ip and port information for each project.
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jon Bellona
+    </metadata>
+    <metadata name='tag'>
+      controller
+    </metadata>
+    <metadata name='tag'>
+      data
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist>
+    <inlet id="0" type="string">
+      <digest>
+        Any data (i f s l)
+      </digest>
+      <description>
+        TEXT_HERE
+      </description>
+    </inlet>
+  </inletlist>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute name="url" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the OSC url.  Must begin with forward slash '/'.
+      </digest>
+      <description>
+        The name of the OSC url.  Must begin with forward slash '/'.
+      </description>
+    </attribute>
+    <attribute name="ip" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the OSC ip address. Defaults to host computer, 127.0.0.1
+      </digest>
+      <description>
+        The name of the OSC ip address.
+      </description>
+    </attribute>
+    <attribute name="port" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the OSC port.
+      </digest>
+      <description>
+        The name of the OSC port.
+      </description>
+    </attribute>
+    <attribute name="receive" get="1" set="1" size="1" type="string">
+      <digest>
+        The name of the receive object to get its ip and port information from. Default is 'oscmaster'.
+      </digest>
+      <description>
+        The name of the receive object to get its ip and port information from. Default is 'oscmaster', which automatically works with data.oscout.master object out of the box.
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <!-- <method name='control'>
+      <digest>
+        control $1 changes the controller to listen for.
+      </digest>
+      <description>
+        control $1 changes the controller to listen for.
+      </description>
+    </method> -->
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist>
+    <!-- <objarg name="type" optional="1" type="number">
+      <digest>
+        Smooth type
+      </digest>
+      <description>
+        0 or 1 selects the smoothing type (0=step, 1=window).
+      </description>
+    </objarg>
+    <objarg name="step::size" optional="1" type="number">
+      <digest>
+        Determine size of step average
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::size" optional="1" type="number">
+      <digest>
+        Determine size of window
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg>
+    <objarg name="window::offset" optional="1" type="number">
+      <digest>
+        Determine size of window offset
+      </digest>
+      <description>
+        This is the scripting name of the internal bpatcher and pattr object.
+      </description>
+    </objarg> -->
+  </objarglist>
+  <!--EXAMPLE-->
+  <examplelist>
+    <!-- <example img='jcom.absdiff.maxref.png'/> -->
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='data.oscout.master'/>
+    <seealso name='udpsend'/>
+    <seealso name='udpreceive'/>
+    <seealso name='data.midiinfo'/>
+    <seealso name='data.serial'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'>
+    <entry name='1'>
+      <description>
+        <!-- Two smoothing mapping functions for modifying data. -->
+      </description>
+    </entry>
+  </misc>
+</c74object>

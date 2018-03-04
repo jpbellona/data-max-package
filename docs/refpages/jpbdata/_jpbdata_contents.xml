@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jpbdata_ref.xsl" type="text/xsl"?>
+<root>
+	<refpage name='data.keys.maxref.xml'/>
+	<refpage name='data.midiinfo.maxref.xml'/>
+	<refpage name='data.oscout.maxref.xml'/>
+	<refpage name='data.oscout.master.maxref.xml'/>
+	<refpage name='data.scale.maxref.xml'/>
+	<refpage name='data.scale.expr.maxref.xml'/>
+	<refpage name='data.serial.maxref.xml'/>
+	<refpage name='data.toggle.maxref.xml'/>
+  <refpage name='data.ttin.maxref.xml'/>
+  <refpage name='data.ttout.maxref.xml'/>
+  <refpage name='data.zoom.maxref.xml'/>
+</root>
