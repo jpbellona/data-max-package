@@ -1,7 +1,7 @@
 README
 
 ABOUT
-Data-x.x.x is a Max package created by Jon Bellona (http://jpbellona.com). The package includes various objects, for data-mapping projects. Data.* objects primarily extend native Max objects for working with digital musical instruments.
+Data-x.x.x is a Max package created by Jon Bellona (http://jpbellona.com). The package includes various objects for data-mapping projects. Data.* objects primarily extend native Max objects for working with digital musical instruments.
 
 
 INSTALLATION
